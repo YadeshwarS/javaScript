@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable Scopes</title>
+</head>
+<style>
+    p{
+        font-size: 20px;
+    }
+    h5,h3{
+        font-size: x-large;
+    }
+</style>
+<body>
+    <p>
+        <h2>Types of Scopes:</h2> 
+        <ul>
+            <li>Global Scope</li>
+            <li>Function/local Scope</li>
+            <li>Block Scope</li>
+        </ul>
+    </p>
+
+    <h3>Global Scope:</h3>
+    <p>
+        An Variable which is declared outside the function which can also 
+        used inside the function is known as global Scope.
+
+        <h5>Example:</h5>
+
+        var name = "yadeshwar"; <br>
+
+        function global_scope() { <br>
+            console.log(name); // output: yadeshwar <br>
+        } <br>
+        global_scope();
+    </p>
+
+    <p>
+        <h3>Function/Local Scope:</h3>
+         An Variable which declared inside the function is cant used in outside 
+        the function this is called function/local Scope.
+
+        <h5>Example:</h5>
+
+        function local_Scope(){ <br>
+            var name = "yadeshwar"; <br>
+            console.log(name); <br>
+        } <br>
+        local_scope(); <br>
+        console.log(name); // throws error <br>
+    </p>
+
+    <p>
+        <h3>Block Scope:</h3>
+
+        An variable which is declared in a function within an block it can be used 
+        in the same block and it cant be used in other blocks in the function 
+        this is called block Scope. 
+        In block scope variables should declare by let or const.
+
+        <h5>Example:</h5>
+
+        function block_scope() { <br>
+            var name = "yadeshwar"; // function scope <br>
+            if(true){ <br>
+            let age = 20; // block code <br>
+            const gender = "male";  <br>
+            } <br>
+        } <br>
+        block_scope(); <br>
+
+    </p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables naming rules</title>
+</head>
+<style>
+    p,b{
+        font-size: 30px;
+    }
+</style>
+<body>
+    <p>
+        <b>Start with a letter, underscore (_), or dollar sign ($):</b> Variable names must 
+        begin with a letter (A-Z, a-z), an underscore (_), or a dollar sign ($). 
+         They cannot start with a number. <br> <br>
+
+        <b>Consist of letters, numbers, underscores, or dollar signs:</b> After the first 
+        character, variable names can include letters, numbers (0-9), underscores (_), 
+        or dollar signs ($). Spaces and special characters (like @, #, etc.) are not 
+        allowed. <br> <br>
+
+        <b>Case sensitivity:</b>JavaScript is case-sensitive, so myVariable and MyVariable 
+        would be treated as different variables. <br> <br>
+
+        <b>Avoid using reserved words:</b>There are certain reserved words in JavaScript that
+         have special meanings and cannot be used as variable names. 
+         Examples of reserved words include if, else, while, for, and function. <br> <br>
+
+        <b>Use camelCase or snake_case:</b>It's common to use either camelCase or 
+         snake_case to name variables. In camelCase, the first word starts with a 
+         lowercase letter, and subsequent words start with uppercase letters, 
+         like myVariableName. In snake_case, all words are in lowercase, and words 
+         are separated by underscores, like my_variable_name. <br> <br>
+    </p>
+    <h2>
+        Here are some examples of valid variable names:
+    </h2>
+    <b>
+        let age = 30; <br>
+        let userName = "John"; <br>
+        let _counter = 0; <br>
+        let $totalAmount = 100; <br>
+        let myLongVariableName = "Hello"; <br>
+    </b>
+
+    <h2>
+        And here are some examples of invalid variable names:
+    </h2>
+    <b>
+        // Invalid: Starts with a number <br>
+        let 2times = 5; <br>
+
+        // Invalid: Contains a special character <br>
+        let first@name = "Alice"; <br>
+ 
+        // Invalid: Reserved word <br>
+        let function = "something"; <br>
+   </b>
+</body>
+</html>

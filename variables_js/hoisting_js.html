@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting JavaScript</title>
+</head>
+<body>
+    <script>
+        //calling the variable before initialization will not throw any error in var
+        console.log(name);
+        var name = "yadeshwar";
+
+        //calling the function before initialization will not throw any error in all types
+
+        details();
+
+        //calling the variable before initialization will throw an error in const
+        console.log(age);
+        const age = 20;
+
+        //calling the variable before initialization will throw an error in let
+        console.log(gender);
+        let gender = "male";
+
+        function details(){
+            var name = "yadeshwar";
+            let gender = "male";
+            const age =20;
+            console.log(name,gender,age);
+        }
+    </script>
+</body>
+</html>

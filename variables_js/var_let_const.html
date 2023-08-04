@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference between var/let/const</title>
+</head>
+<body>
+    
+    <script>
+        /* var
+        you can assign and reassign values in var, variable values inside the scope 
+        and outside the is same, but inside the function scope and outside is different
+        and same in the object and object scope.
+        */
+
+
+        // declaring a value to name variable
+        var name = "yade";
+        //redeclaring a value to the same variable
+        name = "yadesh";
+
+        // normal scope 
+        
+        if(true){
+            var name ="yadeshwar_normalScope";
+            console.log(name);
+        }
+        console.log(name);
+       
+
+        // function scope
+
+        function names() {
+            var name = "yadeshwarS_functionScope";
+            console.log(name);
+        }
+        names();
+
+        // object scope
+
+       var myName = {name:"yade"};
+
+       if(true){
+        var myName = {name:"YADESHWAR_objectScope"};
+        console.log(myName);
+       }
+       console.log(myName);
+
+        console.log(name);
+
+
+        /* let
+        
+       you can assign and reassign the values for a variable and the variables 
+       is different from scope, function scope and object scope.
+
+        */
+       // assigning and reassigning values in let
+        let age = 10;
+        age = 20;
+
+        // normal scope
+
+        if(true){
+            let age = 30;
+            console.log(age);
+        }
+       
+        // function scope
+
+        function ages(){
+            let age = 40;
+            console.log(age);
+        }
+        ages();
+        console.log(age);
+
+        // object scope
+
+        let obj_age = {age:50};
+        if(true){
+            let obj_age = {age:60};
+            console.log(obj_age);
+        }
+        console.log(obj_age);
+
+
+        /* const
+        
+        When you use const, you declare a variable that cannot change its value.
+         It remains constant. its have different variables inside and outside the scope.
+        */
+
+        const gender = "male";
+        // gender = "female";
+
+        // normal scope
+
+        if(true){
+            const gender = "f_male";
+            console.log(gender);
+        }
+
+        // function scope
+
+        function genders(){
+            const gender = "fun_male";
+            console.log(gender);
+        } 
+        genders();
+        console.log(gender);
+
+        // object scope
+
+        const obj_gender = {gender:"obj_male"};
+
+        if(true){
+            const obj_gender = {gender:"object_male"};
+            console.log(obj_gender);
+        }
+        console.log(obj_gender);
+
+
+    </script>
+</body>
+</html>
